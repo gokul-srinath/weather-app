@@ -4,7 +4,7 @@ const hbs=require('hbs')
 const geocode=require('./utils/geocode')
 const forecast=require('./utils/forecast')
 
-
+const port = process.env.PORT || 3000
 const app=express()
 app.set('views',path.join(__dirname,'../templates/views'))
 app.set('view engine','hbs')
@@ -81,6 +81,6 @@ app.get('*',(req,res)=>{
     })
 })
 
-app.listen(3000,()=>{
-    console.log("Server is on port 3000")
+app.listen(port,()=>{
+    console.log("Server is on port "+port)
 })
