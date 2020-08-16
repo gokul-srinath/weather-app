@@ -13,7 +13,7 @@ const forecast=(lat,long,callback)=>{
             callback("please enter valid co-ordinates!",undefined)
         }
         else{
-            callback(undefined,("The weather is "+body.current.weather_descriptions[0]+ " and the temperature is "+body.current.temperature
+            callback(undefined,("The temperature is "+body.current.temperature + " & The weather is "+body.current.weather_descriptions[0]
     ))
         }
     })
